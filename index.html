@@ -12,10 +12,44 @@
     </head>
     <body>
         <div class="container">
-            <header class="header">HEADER</header>
+            <header class="header">
+                <img src="img/logo.png" alt="Trillo Go" class="logo">
+                <form class="search" action="#" method="post">
+                    <input class="search__input "type="text" placeholder="Search hotels">
+                    <button class="search__button" type="button">
+                        <svg class="search__icon">
+                            <use xlink:href="img/sprite.svg#icon-search"></use>
+                        </svg>
+                    </button>
+                </form>
+                <nav class="user-nav">
+                    <div class="user-nav__icon-box">
+                        <svg class="user-nav__icon">
+                            <use xlink:href="img/sprite.svg#icon-bookmark"></use>
+                        </svg>
+                        <span class="user-nav__notification"></span>
+                    </div>
+                    <div class="user-nav__icon-box">
+                        <svg class="user-nav__icon">
+                            <use xlink:href="img/sprite.svg#icon-chat"></use>
+                        </svg>
+                        <span class="user-nav__notification"></span>
+                    </div>
+                    <div class="user-nav__user">
+                        <img src="img/user.jpg" alt="user photo" class="user-nav__user-photo">
+                        <span class="user-nav__user-name">Willie</span>
+                    </div>
+                </nav>
+            </header>
+
             <div class="content">
                 <nav class="sidebar">
-                    NAVIGATION
+                    <!-- <ul class="sidebar__list">
+                        <li class="sidebar__item">Hotel</li>
+                        <li class="sidebar__item">Flight</li>
+                        <li class="sidebar__item">Car Rental</li>
+                        <li class="sidebar__item">Tours</li>
+                    </ul> -->
                 </nav>
                 <main class="hotel-view">
                     HOTEL VIEW

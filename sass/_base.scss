@@ -1,0 +1,68 @@
+//Variables
+:root {
+    //COLOR PALLETTE
+    --color-primary: #eb2f64;
+    --color-primary-light: #FF3366;
+    --color-primary-dark: #BA265D;
+
+    --color-white: #fff;
+    --color-black: #000;
+
+    --color-grey-light-1: #faf9f9;
+    --color-grey-light-2: #f4f2f2;
+    --color-grey-light-3: #f0eeee;
+    --color-grey-light-4: #ccc;
+
+    --color-grey-dark-1: #333;
+    --color-grey-dark-2: #777;
+    --color-grey-dark-3: #999;
+
+    // FONT
+    --default-font-size: 1.6rem;
+    --font-size-small: 1.2rem;
+    --font-size-big: 2rem;
+    --font-size-xl: 2.5rem;
+
+    // BOX-SHADOW
+    --default-shadow: 0 1rem 6rem rgba(0, 0, 0, .5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    //This defines 1rem
+    font-size: 62.5%; //1rem = 10px = 10/16 = 62.5%
+
+    /*@include respond(tablet-land) {
+        font-size: 56.25%; //1rem = 9px = 9/16 = 56.25%
+    }
+
+    @include respond(tablet-por) {
+        font-size: 50%; //1rem = 8px = 8/16 = 50%
+    }
+
+    @include respond(phone) {
+        font-size: 50%; //1rem = 8px = 8/16 = 50%
+    }
+
+    @include respond(desktop-large) {
+        font-size: 75%; //1rem = 12px = 12/16 = 75%*/
+}
+
+body {
+    background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--color-grey-light-2);
+    line-height: 1.6rem;
+    min-height: 100vh;
+}

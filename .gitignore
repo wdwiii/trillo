@@ -3,5 +3,5 @@ Thumbs.db
 node_modules/
 css/main.css
 css/main.prefix.css
-
+.git/
 commit-notes

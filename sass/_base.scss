@@ -18,8 +18,9 @@
     --color-grey-dark-3: #999;
 
     // FONT
+    --font-size-xs: 1.2rem;
+    --font-size-small: 1.4rem;
     --default-font-size: 1.6rem;
-    --font-size-small: 1.2rem;
     --font-size-big: 2rem;
     --font-size-xl: 2.5rem;
 
@@ -39,6 +40,7 @@
 }
 
 html {
+    font-family: sans-serif;
     //This defines 1rem
     font-size: 62.5%; //1rem = 10px = 10/16 = 62.5%
 

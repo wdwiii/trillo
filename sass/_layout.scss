@@ -14,9 +14,14 @@ body {
 }
 
 .header {
-    background-color: var(--color-grey-dark-1);
+    background-color: var(--color-grey-light-3);
+    font-size: var(--font-size-xs);
     height: 7rem;
+
+    display: flex;
+    align-items: center;
     flex: 0 0 100%;
+    justify-content: space-between;
 }
 
 .content {
@@ -25,7 +30,7 @@ body {
 }
 
 .sidebar {
-    background-color: lightblue;
+    background-color: var(--color-grey-dark-1);
     flex: 0 0 20%;
 
     &__list {

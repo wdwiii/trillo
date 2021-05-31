@@ -1,3 +1,18 @@
+/*
+SVG Icon Names
+-----------------
+icon-angle-right
+icon-bookmark
+icon-chat
+icon-directions-car
+icon-location-city
+icon-location-on
+icon-map
+icon-plane
+icon-search
+icon-star-half
+icon-star
+*/
 :root {
   --color-primary: #eb2f64;
   --color-primary-light: #FF3366;
@@ -61,7 +76,7 @@ body {
 .container {
   background-color: var(--color-grey-light-2);
   box-shadow: var(--default-shadow);
-  height: 50rem;
+  margin: 10rem 0;
   flex: 0 1 80%;
   flex-wrap: wrap; }
 
@@ -80,13 +95,15 @@ body {
 
 .sidebar {
   background-color: var(--color-grey-dark-1);
-  flex: 0 0 20%; }
-  .sidebar__list {
-    list-style: none; }
+  display: flex;
+  flex: 0 0 20%;
+  flex-direction: column;
+  justify-content: space-between; }
 
 .hotel-view {
   background-color: green;
-  flex: 1; }
+  flex: 1;
+  height: 70rem; }
 
 .logo {
   height: 3.25rem;
@@ -150,7 +167,7 @@ body {
   .user-nav__notification {
     border-radius: 50%;
     background-color: var(--color-primary);
-    color: var(--color-white);
+    color: var(--color-grey-light-1);
     font-size: .8rem;
     height: 1.7rem;
     width: 1.7rem;
@@ -170,3 +187,49 @@ body {
     height: 4rem;
     margin-right: 1rem;
     width: 4rem; }
+
+.side-nav {
+  font-size: var(--font-size-small);
+  list-style: none;
+  margin-top: 2.5rem; }
+  .side-nav__item {
+    position: relative;
+    text-transform: uppercase;
+    transition: all .3s; }
+    .side-nav__item:not(:last-child) {
+      margin-bottom: .5rem; }
+  .side-nav__item::before {
+    background-color: var(--color-primary);
+    content: "";
+    height: 100%;
+    width: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleY(0);
+    transition: transform 0.2s, width 0.4s cubic-bezier(0.83, 0, 0.17, 1) 0.2s, background-color 0.1s; }
+  .side-nav__item:hover::before, .side-nav__item--active::before {
+    transform: scaleY(1);
+    width: 100%; }
+  .side-nav__item:active::before {
+    background-color: var(--color-primary-light); }
+  .side-nav__icon {
+    fill: currentColor;
+    margin-right: 2rem;
+    height: 2.5rem;
+    width: 2.5rem; }
+  .side-nav__link:link, .side-nav__link:visited {
+    color: var(--color-grey-light-1);
+    padding: 1rem 2.5rem;
+    position: relative;
+    text-decoration: none;
+    transition: all .2s ease;
+    z-index: 15;
+    display: flex;
+    align-items: center; }
+    .side-nav__link:link:hover, .side-nav__link:visited:hover {
+      opacity: 1; }
+
+.legal {
+  padding: 2rem;
+  text-align: center; }

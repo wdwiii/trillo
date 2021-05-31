@@ -1,4 +1,5 @@
 body {
+    ///Flex Styles
     display: flex;
         align-items: center;
         justify-content: center;
@@ -7,7 +8,8 @@ body {
 .container {
     background-color: var(--color-grey-light-2);
     box-shadow: var(--default-shadow);
-    height: 50rem;
+    margin: 10rem 0;
+    ///Flex Styles
     flex: 0 1 80%;
     flex-wrap: wrap;
 
@@ -17,7 +19,7 @@ body {
     background-color: var(--color-grey-light-3);
     font-size: var(--font-size-xs);
     height: 7rem;
-
+    ///Flex Styles
     display: flex;
     align-items: center;
     flex: 0 0 100%;
@@ -31,14 +33,15 @@ body {
 
 .sidebar {
     background-color: var(--color-grey-dark-1);
+    //Flex styles
+    display: flex;
     flex: 0 0 20%;
-
-    &__list {
-        list-style: none;
-    }
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .hotel-view {
  background-color: green;
  flex: 1;
+ height: 70rem;
 }

@@ -96,7 +96,7 @@
     &__notification {
         border-radius: 50%;
         background-color: var(--color-primary);
-        color: var(--color-white) ;
+        color: var(--color-grey-light-1) ;
         font-size: .8rem;
         height: 1.7rem;
         width: 1.7rem;
@@ -125,4 +125,85 @@
         margin-right: 1rem;
         width: 4rem;
     }
+}
+
+//=========================
+//Side Nav & Icons
+
+.side-nav {
+    font-size: var(--font-size-small);
+    list-style: none;
+    margin-top: 2.5rem;
+
+    &__item {
+        position: relative;
+        text-transform: uppercase;
+        transition: all .3s;
+
+        &:not(:last-child) {
+            margin-bottom: .5rem;
+        }
+    }
+
+    &__item::before {
+        //Selector for list item highlight
+        background-color: var(--color-primary);
+        content: "";
+        height: 100%;
+        width: 3px;
+        position: absolute;
+            top: 0;
+            left: 0;
+        transform: scaleY(0);
+        transition: transform .2s,
+                    width .4s cubic-bezier(0.83, 0, 0.17, 1) .2s,
+                    background-color .1s;
+    }
+
+    &__item:hover::before,
+    &__item--active::before {
+        //Show and fill list item on hover
+        transform: scaleY(1);
+        width: 100%;
+    }
+
+    &__item:active::before {
+        //Lighten hightlight bg-color on click
+        background-color: var(--color-primary-light);
+    }
+
+    &__icon {
+        fill: currentColor;
+        //currentColor will inherit color of parent div (.icon__link)
+        margin-right: 2rem;
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+
+    &__link:link,
+    &__link:visited{
+        color: var(--color-grey-light-1);
+        padding: 1rem 2.5rem;
+        position: relative;
+        text-decoration: none;
+        transition: all .2s ease;
+        z-index: 15;
+        //Flex styles
+        display: flex;
+        align-items: center;
+
+
+        &:hover {
+            opacity: 1;
+
+        }
+    }
+}
+
+//=========================
+//Coppyright Text
+
+.legal {
+    padding: 2rem;
+    text-align: center;
 }

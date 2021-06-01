@@ -1,11 +1,15 @@
-//=========================
+/*==========================
+            HEADER
+===========================*/
+
+//~~~~~~~~~~~~~~~~~~~~~~~
 //Header Logo
 .logo {
     height: 3.25rem;
     margin: 0 0 0 2rem;
 }
 
-//=========================
+//~~~~~~~~~~~~~~~~~~~~~~~
 //Header Search Bar
 .search {
     display: flex;
@@ -60,7 +64,7 @@
     }
 }
 
-//=========================
+//~~~~~~~~~~~~~~~~~~~~~~~
 //Header Nav & Icons
 .user-nav {
     //Flex Styles
@@ -127,7 +131,10 @@
     }
 }
 
-//=========================
+/*==========================
+            SIDEBAR
+===========================*/
+//~~~~~~~~~~~~~~~~~~~~~~~
 //Side Nav & Icons
 
 .side-nav {
@@ -200,10 +207,116 @@
     }
 }
 
-//=========================
+//~~~~~~~~~~~~~~~~~~~~~~~
 //Coppyright Text
 
 .legal {
     padding: 2rem;
     text-align: center;
+}
+
+/*==========================
+    MAIN (.hotel-view)
+===========================*/
+
+//~~~~~~~~~~~~~~~~~~~~~~~
+//Picture Gallery
+
+.gallery {
+    display: flex;
+
+    &__item {
+
+    }
+
+    &__photo {
+        display: block;
+        width: 100%;
+    }
+}
+
+
+.overview {
+    background: var(--color-grey-light-3);
+    border-bottom: 1px solid var(--color-grey-light-4);
+    //Flex Styles
+    display: flex;
+    align-items: center;
+
+    &__heading {
+        font-size: 2.5rem;
+        font-weight: 100;
+        letter-spacing: 1px;
+        margin: 2.5rem;
+    }
+
+    &__stars {
+        margin-right: auto;
+        display: flex;
+    }
+
+    &__icon-star,
+    &__icon-location {
+        fill: var(--color-primary);
+        height:2rem;
+        width: 2rem;
+    }
+
+    &__location {
+        font-size: var(--font-size-small);
+        padding: 0 2rem;
+        display: flex;
+    }
+
+    &__icon-location {
+        margin-right: .5rem;
+    }
+
+    &__rating {
+        background: var(--color-primary);
+        color: var(--color-grey-light-1);
+        font-size: var(--font-size-big);
+        padding: 0 2rem;
+        text-align: center;
+        //Flex styles
+        display: flex;
+        align-self: stretch;
+        justify-content: center;
+        flex-direction: column;
+
+        &--avg {
+            font-size: var(--font-size-xl);
+            font-weight: 100;
+            margin-bottom: .5rem;
+        }
+
+        &--count {
+            font-size: var(--font-size-xs);
+            text-transform: uppercase;
+        }
+    }
+}
+
+/*==========================
+    BUTTON INLINE
+===========================*/
+.btn-inline {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid currentColor;
+    color: var(--color-primary);
+    cursor: pointer;
+    display: inline-block;
+    font-size: inherit;
+    padding-bottom: 2px;
+    transition: all .2s;
+
+
+    &:hover {
+        color: var(--color-grey-dark-4);
+    }
+
+    &:focus {
+        outline: none;
+    }
 }

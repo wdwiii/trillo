@@ -42,6 +42,9 @@ icon-star
 
     // BOX-SHADOW
     --default-shadow: 0 1rem 6rem rgba(0, 0, 0, .5);
+
+    //MARGIN AND PADDING
+    --hotel-overview-padding: 2rem;
 }
 
 * {
@@ -80,7 +83,7 @@ body {
     background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
     background-repeat: no-repeat;
     background-size: cover;
-    color: var(--color-grey-light-2);
+    color: var(--color-grey-dark-1);
     line-height: 1.6rem;
     min-height: 100vh;
 }

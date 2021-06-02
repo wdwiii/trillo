@@ -5,8 +5,11 @@ body {
         justify-content: center;
 }
 
+//~~~~~~~~~~~~~~~~~~~~~~~
+//Container that holds the header and content area
+
 .container {
-    background-color: var(--color-grey-light-2);
+    background-color: var(--color-grey-light-1);
     box-shadow: var(--default-shadow);
     margin: 10rem 0;
     ///Flex Styles
@@ -16,8 +19,8 @@ body {
 }
 
 .header {
-    background-color: var(--color-grey-light-3);
-    border-bottom: 1px solid var(--color-grey-light-4);
+    background-color: var(--color-white);
+    border-bottom: var(--line);
     font-size: var(--font-size-xs);
     height: 7rem;
     ///Flex Styles
@@ -27,6 +30,8 @@ body {
     justify-content: space-between;
 }
 
+//~~~~~~~~~~~~~~~~~~~~~~~
+//Container that holds the sidebar and hotel-view div
 .content {
     display: flex;
     align-items: stretch;
@@ -41,7 +46,115 @@ body {
     justify-content: space-between;
 }
 
+//~~~~~~~~~~~~~~~~~~~~~~~
+//Main section. Container that holds the gallery, overview and detail divs
 .hotel-view {
  flex: 1;
- height: 70rem;
+}
+
+.detail {
+    background-color: var(--color-white);
+    border-bottom: var(--line);
+    padding: 4.5rem;
+    //Flex Styles
+    display: flex;
+    align-items: stretch;
+}
+
+//~~~~~~~~~~~~~~~~~~~~~~~
+//Container that holds the paragraph, list, and recommend divs
+
+.description {
+    background-color: var(--color-grey-light-3);
+    box-shadow: var(--shadow-light);
+    font-size: var(--font-size-small);
+    margin-right: 4.5rem;
+    padding: 3rem;
+    flex: 0 0 60%;
+}
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~
+//Paragraph
+
+.paragraph:not(:last-of-type) {
+    margin-bottom: 2rem;
+    }
+
+//~~~~~~~~~~~~~~~~~~~~~~~
+//List
+
+.list {
+    border-bottom: var(--line);
+    border-top: var(--line);
+    list-style-type: none;
+    margin: 3rem 0;
+    padding: 3rem;
+    //Flex styles
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+        flex: 0 0 50%;
+        margin-bottom: .7rem;
+    }
+
+    &__item::before {
+    //psuedo element that allows for custom list-item marker
+        // background-image: url("../img/svg/angle-right.svg");
+        // background-repeat: no-repeat;
+        // background-size: contain;
+        content: ""; //Must specify content in order for element to be visible
+        display: inline-block;
+        margin-right: .5rem;
+        height: 1.5rem;
+        width: 1.5rem;
+
+        //Modern Browsers
+        background-color: var(--color-primary);
+        -webkit-mask-image: url("../img/svg/angle-right.svg");
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-size: contain;
+        mask-image: url("../img/svg/angle-right.svg");
+        mask-repeat: no-repeat;
+        mask-size: contain;
+        //The mask CSS shorthand property hides an element (partially or fully) by masking or clipping the image at specific points.
+    }
+}
+
+//~~~~~~~~~~~~~~~~~~~~~~~
+//List
+
+.recommend {
+    color: var(--color-grey-dark-2);
+    //Flex Styles
+    display: flex;
+    align-items: center;
+
+    &__count {
+        font-size: var(--font-size-small);
+        margin-right: auto;
+        //If you apply auto margins to a flex item, that item will automatically extend its specified margin to occupy the extra space in the flex container, depending on the direction in which the auto-margin is applied.
+    }
+
+    &__photo {
+        border: 3px solid var(--color-grey-light-3);
+        border-radius: 50%;
+        box-sizing: content-box;
+        height: 3rem;
+        width: 3rem;
+
+        &:not(:last-child) {
+            margin-right: -1.2rem;
+        }
+    }
+}
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~
+//Container that holds the user-reviews
+.reviews {
+    background-color: var(--color-grey-light-3);
+    box-shadow: var(--shadow-light);
+    flex: 1;
 }

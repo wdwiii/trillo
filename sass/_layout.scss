@@ -11,9 +11,9 @@ body {
 .container {
     background-color: var(--color-grey-light-1);
     box-shadow: var(--default-shadow);
-    margin: 10rem 0;
+    margin: 5rem 0;
     ///Flex Styles
-    flex: 0 1 80%;
+    flex: 0 1 90%;
     flex-wrap: wrap;
 
 }
@@ -46,6 +46,10 @@ body {
     justify-content: space-between;
 }
 
+.legal {
+    color: var(--color-grey-light-1);
+}
+
 //~~~~~~~~~~~~~~~~~~~~~~~
 //Main section. Container that holds the gallery, overview and detail divs
 .hotel-view {
@@ -53,7 +57,7 @@ body {
 }
 
 .detail {
-    background-color: var(--color-white);
+    background-color: var(--color-grey-light-3);
     border-bottom: var(--line);
     padding: 4.5rem;
     //Flex Styles
@@ -65,9 +69,10 @@ body {
 //Container that holds the paragraph, list, and recommend divs
 
 .description {
-    background-color: var(--color-grey-light-3);
+    background-color: var(--color-white);
     box-shadow: var(--shadow-light);
     font-size: var(--font-size-small);
+    font-weight: 100;
     margin-right: 4.5rem;
     padding: 3rem;
     flex: 0 0 60%;
@@ -89,7 +94,7 @@ body {
     border-top: var(--line);
     list-style-type: none;
     margin: 3rem 0;
-    padding: 3rem;
+    padding: 2.75rem;
     //Flex styles
     display: flex;
     flex-wrap: wrap;
@@ -153,8 +158,10 @@ body {
 
 //~~~~~~~~~~~~~~~~~~~~~~~
 //Container that holds the user-reviews
-.reviews {
-    background-color: var(--color-grey-light-3);
-    box-shadow: var(--shadow-light);
+.user-reviews {
+    //Flex Styles
+    display: flex;
+    align-items: center;
     flex: 1;
+    flex-direction: column;
 }

@@ -311,12 +311,101 @@
     padding-bottom: 2px;
     transition: all .2s;
 
+    & span {
+        margin-left: 3px;
+        transition: margin-left .2s;
+    }
+
 
     &:hover {
         color: var(--color-grey-dark-4);
+
+        span {
+        margin-left: 8px;
+        }
     }
 
     &:focus {
         outline: none;
     }
+
+    &:hover {
+
+    }
+}
+
+/*==========================
+    USER REVIEW SECTION
+===========================*/
+
+.review {
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-light);
+    font-weight: 100;
+    margin-bottom: 2.5rem;
+    padding: 2rem;
+    position: relative;
+    //Flex Styles
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    &::before {
+        content: "\201C"; //CSS input for Left Double Quotaton
+        color: var(--color-grey-light-3);
+        font-family: cursive;
+        font-size: 15rem;
+        overflow: hidden;
+        position: absolute;
+            top: 5rem;
+            left: -1rem;
+        z-index: 1;
+    }
+
+
+    &__text {
+        flex: 0 0 100%;
+        position: relative;
+        z-index: 10;
+    }
+
+    &__user {
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+        //Flex Styles
+        display: flex;
+        align-items: center;
+        flex: 1;
+    }
+
+    &__photo {
+        border-radius: 50%;
+        margin-right: .5rem;
+        height: 3.5rem;
+        width: 3.5rem;
+        flex: 0 0;
+    }
+
+    &__user-box {
+        margin-right: auto;
+    }
+
+    &__user-name {
+
+        font-size: 1rem;
+        font-weight: 400;
+        text-transform: uppercase;
+
+    }
+
+    &__user-date {
+        font-size: .9rem;
+        line-height: 1rem;
+    }
+
+    &__user-rating {
+        color: var(--color-primary);
+        font-size: 2.5rem;
+    }
+
 }

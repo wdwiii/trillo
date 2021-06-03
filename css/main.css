@@ -79,8 +79,8 @@ body {
 .container {
   background-color: var(--color-grey-light-1);
   box-shadow: var(--default-shadow);
-  margin: 10rem 0;
-  flex: 0 1 80%;
+  margin: 5rem 0;
+  flex: 0 1 90%;
   flex-wrap: wrap; }
 
 .header {
@@ -104,20 +104,24 @@ body {
   flex-direction: column;
   justify-content: space-between; }
 
+.legal {
+  color: var(--color-grey-light-1); }
+
 .hotel-view {
   flex: 1; }
 
 .detail {
-  background-color: var(--color-white);
+  background-color: var(--color-grey-light-3);
   border-bottom: var(--line);
   padding: 4.5rem;
   display: flex;
   align-items: stretch; }
 
 .description {
-  background-color: var(--color-grey-light-3);
+  background-color: var(--color-white);
   box-shadow: var(--shadow-light);
   font-size: var(--font-size-small);
+  font-weight: 100;
   margin-right: 4.5rem;
   padding: 3rem;
   flex: 0 0 60%; }
@@ -130,7 +134,7 @@ body {
   border-top: var(--line);
   list-style-type: none;
   margin: 3rem 0;
-  padding: 3rem;
+  padding: 2.75rem;
   display: flex;
   flex-wrap: wrap; }
   .list__item {
@@ -166,10 +170,11 @@ body {
     .recommend__photo:not(:last-child) {
       margin-right: -1.2rem; }
 
-.reviews {
-  background-color: var(--color-grey-light-3);
-  box-shadow: var(--shadow-light);
-  flex: 1; }
+.user-reviews {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  flex-direction: column; }
 
 /*==========================
             HEADER
@@ -369,7 +374,64 @@ body {
   font-size: inherit;
   padding-bottom: 2px;
   transition: all .2s; }
+  .btn-inline span {
+    margin-left: 3px;
+    transition: margin-left .2s; }
   .btn-inline:hover {
     color: var(--color-grey-dark-4); }
+    .btn-inline:hover span {
+      margin-left: 8px; }
   .btn-inline:focus {
     outline: none; }
+
+/*==========================
+    USER REVIEW SECTION
+===========================*/
+.review {
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-light);
+  font-weight: 100;
+  margin-bottom: 2.5rem;
+  padding: 2rem;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+  .review::before {
+    content: "\201C";
+    color: var(--color-grey-light-3);
+    font-family: cursive;
+    font-size: 15rem;
+    overflow: hidden;
+    position: absolute;
+    top: 5rem;
+    left: -1rem;
+    z-index: 1; }
+  .review__text {
+    flex: 0 0 100%;
+    position: relative;
+    z-index: 10; }
+  .review__user {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    flex: 1; }
+  .review__photo {
+    border-radius: 50%;
+    margin-right: .5rem;
+    height: 3.5rem;
+    width: 3.5rem;
+    flex: 0 0; }
+  .review__user-box {
+    margin-right: auto; }
+  .review__user-name {
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase; }
+  .review__user-date {
+    font-size: .9rem;
+    line-height: 1rem; }
+  .review__user-rating {
+    color: var(--color-primary);
+    font-size: 2.5rem; }

@@ -335,6 +335,64 @@
 }
 
 /*==========================
+    CALL TO ACTION BUTTON
+        (Book Now)
+===========================*/
+.btn {
+    background-image: linear-gradient(135deg, var(--color-primary-light), var(--color-primary-dark));
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 .5rem 10px rgba(0, 0, 0, .5);
+    color: var(--color-white);
+    cursor: pointer;
+    font-size: var(--font-size-big);
+    font-weight: 100;
+    margin-top: 2.5rem;
+    overflow: hidden;
+    //^Hides btn__invisible when not in hover state
+    position: relative;
+    text-transform: uppercase;
+    transition: all .2s;
+
+    & > * {
+    //Selects child elements of .btn (&__visible and &__invisible)
+        display: inline-block;
+        height: 100%;
+        transition: all .2s;
+    }
+
+    &__visible {
+        padding: 2rem 7.5rem;
+    }
+
+    &__invisible {
+        padding: 2rem 0;
+        position: absolute;
+            left: 0;
+            top: -100%;
+        width: 100%;
+    }
+
+
+    &:hover {
+        animation: pulsate 1s infinite;
+        background-image: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary-light));
+
+        & .btn__visible {
+            transform: translateY(100%);
+        }
+
+        & .btn__invisible {
+            top: 0;
+        }
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+/*==========================
     USER REVIEW SECTION
 ===========================*/
 

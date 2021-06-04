@@ -28,7 +28,7 @@ icon-star
   --color-grey-dark-3: #999;
   --font-size-xs: 1.2rem;
   --font-size-small: 1.4rem;
-  --default-font-size: 1.6rem;
+  --font-size-med: 1.6rem;
   --font-size-big: 2rem;
   --font-size-xl: 2.5rem;
   --default-shadow: 0 1rem 6rem rgba(0, 0, 0, .5);
@@ -191,7 +191,7 @@ body {
   flex-direction: column;
   justify-content: center; }
   .cta__heading {
-    font-size: var(--font-size-big);
+    font-size: var(--font-size-med);
     font-weight: 100;
     text-transform: uppercase; }
 
@@ -414,7 +414,7 @@ body {
   box-shadow: 0 0.5rem 10px rgba(0, 0, 0, 0.5);
   color: var(--color-white);
   cursor: pointer;
-  font-size: var(--font-size-big);
+  font-size: var(--font-size-small);
   font-weight: 100;
   margin-top: 2.5rem;
   overflow: hidden;

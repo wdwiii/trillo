@@ -51,6 +51,16 @@ icon-star
     --line: 1px solid var(--color-grey-light-4);
 }
 
+//MEDIA QUERY VARIABLES
+$bp-large-2: 75em; //1200px
+$bp-large-1: 68.75em; //1100px
+$bp-med-3: 64em; //1028px
+$bp-med-2: 56.25em; //900px
+$bp-med-1:  44.37em; //710px
+$bp-small: 37.5em; //600px
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -65,13 +75,17 @@ icon-star
 html {
     font-family: sans-serif;
     //This defines 1rem
-    font-size: 62.5%; //1rem = 10px = 10/16 = 62.5%
+    font-size: 62.5%; //1rem = 10px = 10/16 = .625
 
-    /*@include respond(tablet-land) {
-        font-size: 56.25%; //1rem = 9px = 9/16 = 56.25%
+    @media only screen and (max-width: $bp-med-3) {
+        font-size: 56.25%; //1rem = 9px = 9/16 = .5625
     }
 
-    @include respond(tablet-por) {
+    @media only screen and (max-width: $bp-med-2) {
+        font-size: 52%; //1rem = 8.32px = 8.32/16 = .52
+    }
+
+    /*@include respond(tablet-por) {
         font-size: 50%; //1rem = 8px = 8/16 = 50%
     }
 

@@ -13,8 +13,14 @@ body {
     box-shadow: var(--default-shadow);
     margin: 5rem 0;
     ///Flex Styles
-    flex: 0 1 90%;
+    display: flex;
+    flex: 0 0 90%;
     flex-wrap: wrap;
+
+    @media only screen and (max-width: $bp-large-2) {
+        margin: 0;
+        flex: 0 0 100%;
+    }
 
 }
 
@@ -22,12 +28,15 @@ body {
     background-color: var(--color-white);
     border-bottom: var(--line);
     font-size: var(--font-size-xs);
-    height: 7rem;
     ///Flex Styles
     display: flex;
     align-items: center;
     flex: 0 0 100%;
     justify-content: space-between;
+
+    @media only screen and (max-width: 31.25em) {
+        flex-wrap: wrap;
+    }
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~
@@ -35,6 +44,10 @@ body {
 .content {
     display: flex;
     align-items: stretch;
+
+    @media only screen and (max-width: $bp-med-1) {
+        flex-direction: column;
+    }
 }
 
 .sidebar {
@@ -63,6 +76,18 @@ body {
     //Flex Styles
     display: flex;
     align-items: stretch;
+
+    @media only screen and (max-width: $bp-med-3) {
+        padding: 2.5rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        flex-direction: column;
+    }
+
+    @media only screen and (max-width: 50.9em) {
+        padding: 1.5rem;
+    }
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~
@@ -76,6 +101,20 @@ body {
     margin-right: 4.5rem;
     padding: 3rem;
     flex: 0 0 60%;
+
+    @media only screen and (max-width: $bp-med-3) {
+        margin-right: 2.5rem;
+        padding: 2.5rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        margin-right: 0;
+        margin-bottom: 2.5rem;
+    }
+
+    @media only screen and (max-width: 50.9em) {
+        padding: 1.5rem;
+    }
 }
 
 
@@ -99,9 +138,17 @@ body {
     display: flex;
     flex-wrap: wrap;
 
+    @media only screen and (max-width: $bp-med-2) {
+        padding: 3rem 0;
+    }
+
     &__item {
         flex: 0 0 50%;
         margin-bottom: .7rem;
+
+        @media only screen and (max-width: 22.5em) {
+            font-size: var(--font-size-xs);
+        }
     }
 
     &__item::before {
@@ -115,8 +162,16 @@ body {
         height: 1.5rem;
         width: 1.5rem;
 
-        //Modern Browsers
+        //Older Browsers
+        background-image: url('../img/svg/angle-right.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+
+
+        //Modern Browsers - mask-size
+        @supports (-webkit-mask-image: url()) or (mask-image: url()) {
         background-color: var(--color-primary);
+        background-image: none;
         -webkit-mask-image: url("../img/svg/angle-right.svg");
         -webkit-mask-repeat: no-repeat;
         -webkit-mask-size: contain;
@@ -124,6 +179,7 @@ body {
         mask-repeat: no-repeat;
         mask-size: contain;
         //The mask CSS shorthand property hides an element (partially or fully) by masking or clipping the image at specific points.
+        }
     }
 }
 
@@ -136,10 +192,20 @@ body {
     display: flex;
     align-items: center;
 
+    @media only screen and (max-width: $bp-med-2) {
+        flex-direction: column;
+        align-items: center;
+    }
+
     &__count {
         font-size: var(--font-size-small);
         margin-right: auto;
         //If you apply auto margins to a flex item, that item will automatically extend its specified margin to occupy the extra space in the flex container, depending on the direction in which the auto-margin is applied.
+
+        @media only screen and (max-width: $bp-med-2) {
+            margin-right: 0;
+            margin-bottom: 1rem;
+        }
     }
 
     &__photo {
@@ -159,11 +225,16 @@ body {
 //~~~~~~~~~~~~~~~~~~~~~~~
 //Container that holds the user-reviews
 .user-reviews {
+    font-size: var(--font-size-xs);
     //Flex Styles
     display: flex;
     align-items: center;
     flex: 1;
     flex-direction: column;
+
+    @media only screen and (max-width: 37.5em) {
+        font-size: var(--font-size-small);
+    }
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~
@@ -176,9 +247,14 @@ body {
     flex-direction: column;
     justify-content: center;
 
+    @media only screen and (max-width: $bp-med-2) {
+        padding: 2.5rem;
+    }
+
     &__heading {
         font-size: var(--font-size-med);
         font-weight: 100;
+        text-align: center;
         text-transform: uppercase;
     }
 }

@@ -14,6 +14,7 @@
         <div class="container">
             <header class="header">
                 <img src="img/logo.png" alt="Trillo Go" class="logo">
+                <span class="logo-word">Trillo<span>&copy;</span></span>
                 <form class="search" action="#" method="post">
                     <input class="search__input "type="text" placeholder="Search hotels">
                     <button class="search__button" type="button">
@@ -36,8 +37,65 @@
                         <span class="user-nav__notification">7</span>
                     </div>
                     <div class="user-nav__user">
-                        <img src="img/user.jpg" alt="user photo" class="user-nav__user-photo">
-                        <span class="user-nav__user-name">Willie</span>
+                        <label for="dd-toggle" class="user-nav__user-name">
+                            <img src="img/user.jpg" alt="user photo" class="user-nav__user-photo"><span>Willie</span>
+                        </label>
+                        <input type="checkbox" id="dd-toggle">
+                        <nav class="dropdown">
+                            <span class="dropdown__title">Account settings</span>
+                            <label for="dd-toggle" class="dropdown__close-btn">
+                                <span>X</span>
+                            </label>
+                            <img src="img/user.jpg" alt="user photo" class="dropdown__photo">
+                            <span class="dropdown__user-name">Willie Whitfield</span>
+                            <ul class="dropdown__icon-tray">
+                                <li class="dropdown__icon-tray-item">
+                                    <svg class="dropdown__icon">
+                                        <use href="img/sprite.svg#icon-credit-card"></use>
+                                    </svg>
+                                </li>
+                                <li class="dropdown__icon-tray-item">
+                                    <svg class="dropdown__icon">
+                                        <use href="img/sprite.svg#icon-key"></use>
+                                    </svg>
+                                </li>
+                                <li class="dropdown__icon-tray-item">
+                                    <svg class="dropdown__icon">
+                                        <use href="img/sprite.svg#icon-create"></use>
+                                    </svg>
+                                </li>
+                            </ul>
+                            <ul class="dropdown__settings">
+                                <li class="dropdown__settings-item">
+                                    <a href="" class="dropdown__link">SYNC</a>
+                                </li>
+                                <li class="dropdown__settings-item">
+                                    <a href="" class="dropdown__link">Manage your account</a>
+                                </li>
+                            </ul>
+                            <div class="dropdown__fam-hub-heading">
+                                <span class="dropdown__fam-hub-heading-title">Family Hub</span>
+                                <a href="#" class="dropdown__fam-hub-heading-add-more">+</a>
+                            </div>
+                            <ul class="dropdown__fam-hub">
+                                <li class="dropdown__fam-hub-member">
+                                    <span class="dropdown__fam-hub-photo">K</span>
+                                    <a href="#" class="dropdown__link">Kitty</a>
+                                </li>
+                                <li class="dropdown__fam-hub-member">
+                                    <span class="dropdown__fam-hub-photo">S</span>
+                                    <a href="#" class="dropdown__link">Skip</a>
+                                </li>
+                                <li class="dropdown__fam-hub-member">
+                                    <span class="dropdown__fam-hub-photo">B</span>
+                                    <a href="#" class="dropdown__link">Buck</a>
+                                </li>
+                                <li class="dropdown__fam-hub-member">
+                                    <span class="dropdown__fam-hub-photo">T</span>
+                                    <a href="#" class="dropdown__link">Teekay</a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                 </nav>
             </header>
